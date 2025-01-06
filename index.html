@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Registration System</h1>
+    
+    <!-- Form for adding a student -->
+    <form id="studentForm">
+      <input type="text" id="studentEnrollmentNo" placeholder="Student Enrollment Number" required>
+      <input type="text" id="studentName" placeholder="Student Name" required>
+      <input type="number" id="studentAge" placeholder="Student Age" required>
+      <select id="studentCourse" required>
+        <option value="" disabled selected>Select Course</option>
+        <option value="B.Tech (CSE)">B.Tech (Computer Science & Engineering)</option>
+        <option value="B.Tech (ECE)">B.Tech (Electronics & Communication)</option>
+        <option value="B.Tech (ME)">B.Tech (Mechanical Engineering)</option>
+        <option value="B.Tech (CE)">B.Tech (Civil Engineering)</option>
+        <option value="MCA">MCA (Master of Computer Applications)</option>
+        <option value="BCA">BCA (Bachelor of Computer Applications)</option>
+      </select>
+      <button type="submit">Add Student</button>
+    </form>
+    
+    <!-- Table for displaying students -->
+    <h2>Registered Students</h2>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Enrollment No</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Course</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    
+    <!-- Search Section -->
+    <h2>Search Student</h2>
+    <div class="search">
+      <select id="searchType">
+        <option value="enrollment">By Enrollment Number</option>
+        <option value="name">By Name</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Enter Search Term">
+      <button id="searchButton">Search</button>
+    </div>
+    <div id="searchResult"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
